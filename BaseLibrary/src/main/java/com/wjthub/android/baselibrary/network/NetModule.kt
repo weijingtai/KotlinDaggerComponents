@@ -1,7 +1,7 @@
 package com.wjthub.android.baselibrary.network
 
 import com.google.gson.GsonBuilder
-import com.wjthub.android.baselibrary.di.BaseApplication
+import com.wjthub.android.baselibrary.BaseApplication
 import dagger.Module
 import dagger.Provides
 import okhttp3.Cache

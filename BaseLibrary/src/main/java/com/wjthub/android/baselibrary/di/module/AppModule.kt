@@ -1,6 +1,6 @@
 package com.wjthub.android.baselibrary.di.module
 
-import com.wjthub.android.baselibrary.di.BaseApplication
+import com.wjthub.android.baselibrary.BaseApplication
 import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton

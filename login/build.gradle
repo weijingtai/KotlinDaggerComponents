@@ -23,7 +23,13 @@ android {
         versionCode rootProject.versionCode
         versionName rootProject.versionName
         multiDexEnabled true
+        kapt {
+            arguments {
+                arg("AROUTER_MODULE_NAME", "login")
+            }
+        }
     }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -31,6 +37,18 @@ android {
     kotlinOptions {
         jvmTarget = JavaVersion.VERSION_1_8
     }
+
+
+    buildFeatures {
+        viewBinding = true
+    }
+    dataBinding {
+        enabled = true
+    }
+    kapt {
+        generateStubs = true
+    }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -54,8 +72,27 @@ android {
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "androidx.appcompat:appcompat:$appcompat_version"
+    implementation "androidx.constraintlayout:constraintlayout:$constraintlayout_version"
     implementation "com.google.dagger:dagger:$dagger_version"
+    // ARouter
+    implementation "com.alibaba:arouter-api:$arouter_version"
+
+    // Navigation
+    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+
+    // viewModel + liveData
+    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-savedstate:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-common-java8:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-service:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-process:$lifecycle_version"
+
     kapt "com.google.dagger:dagger-compiler:$dagger_version"
+    kapt "com.alibaba:arouter-compiler:$arouter_compiler_version"
 
     implementation project(":BaseLibrary")
 }

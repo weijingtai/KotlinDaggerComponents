@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">Login</string>
+    <string name="title_login">login</string>
+    <string name="login_tag">Hello Login</string>
+    <string name="prompt_email">Email</string>
+    <string name="title_register">Register</string>
+    <string name="register_tag">Hello Register</string>
+    <string name="username">Username</string>
+    <string name="prompt_password">Password</string>
+    <string name="prompt_repassword">Check Password</string>
+    <string name="register">Register</string>
+    <string name="back_toLogin">Go Back To Login</string>
+    <string name="swipe_right_for_login">Swipe To Login</string>
+    <string name="login_btn_login">Login</string>
+    <string name="login_label_or">OR</string>
+    <string name="to_register_page">To Register Page</string>
+    <string name="swipe_left_for_register">Swipe To Register</string>
 </resources>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login_register_navigation"
+    app:startDestination="@+id/navigation_login_home">
+
+    <fragment
+        android:id="@+id/navigation_login_home"
+        android:name="com.wjthub.android.login.ui.fragment.LoginHomeFragment"
+        android:label="@string/title_login"
+        tools:layout="@layout/fragment_login_home" >
+        <action
+            android:id="@+id/action_navigation_login_home_to_register"
+            app:destination="@id/navigation_login_register"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@+id/navigation_login_home"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_login_register"
+        android:name="com.wjthub.android.login.ui.fragment.LoginRegisterFragment"
+        android:label="@string/title_register"
+        tools:layout="@layout/fragment_login_register" />
+</navigation>
